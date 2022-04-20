@@ -1,7 +1,7 @@
 import React from 'react'
 import {WiHumidity} from 'react-icons/wi'
 import {BsThermometerSun, BsThermometerSnow} from 'react-icons/bs'
-import imgIcon from '../imagen/imgIcon.png';
+import imgIcon from '../../imagen/imgIcon.png';
 
 
 export const Clima = ({resultado}) => {
@@ -13,14 +13,14 @@ export const Clima = ({resultado}) => {
 
   const kelvin = 273.15;
   const convertirClima = (temp) =>{
-    return parseFloat(main.temp - kelvin, 10).toFixed();
+    return parseFloat(temp - kelvin, 10).toFixed();
   }
 
   
-  const tiempo = convertirClima('temp');
-  const tempMax = convertirClima('temp_max');
-  const temMin = convertirClima('temp_min');
-  const tempHum = convertirClima('humidity');
+  const tiempo = convertirClima(main.temp);
+  const tempMax = convertirClima(main.temp_max);
+  const temMin = convertirClima(main.temp_min);
+  /* const tempHum = convertirClima(main.humidity); */
 
 
   return (
@@ -54,7 +54,7 @@ export const Clima = ({resultado}) => {
           <p className='pronostico__title'>Humeda</p>
           <div className='icon-temp'>
             <WiHumidity className='icon-temp__icon icon-temp__icon--grey ' />
-            <span className='icon-temp__num'>{tempHum}</span>
+            <span className='icon-temp__num'>{main.humidity}</span>
             <span className='icon-temp__num porciento'>%</span>
           </div>
         </div>
