@@ -1,0 +1,295 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(6,146,246);
+  background: linear-gradient(157deg, rgba(6,146,246,1) 15%, rgba(5,193,245,1) 52%, rgba(20,196,166,1) 100%);
+  color: white; 
+  font-family: 'K2D', sans-serif;
+}
+
+.nav{
+/*   border: solid 1px red; */
+max-width: 1024px;
+  height: 70px;
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+  padding: 0 1rem;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav__title{
+  font-weight: 100;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+/*   padding: 0;
+  margin: 0; */
+
+  gap: 1rem;
+  z-index: 1;
+}
+
+.container-input{
+  width: 120px;
+  z-index: 1;
+/*   border: 1px solid  black; */
+}
+.container-input__label-lbl{
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0 10px;
+  /* border: 1px solid  black; */
+
+}
+.container-input__input-txt{
+  background: none;
+  height: 27px;
+  width: 100%;
+  border:  white solid 1px;
+  border-radius: 14px;
+  font-weight: 700;
+  outline: none;
+  padding: 0 10px;
+}
+
+/* -------------- */
+
+.drowbox__select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  /* outline:0; */
+/*   box-shadow:none; */
+ /*  border:0!important; */
+  background: white;
+  /* background-image: none; */
+  border: none;
+  flex: 1;
+  padding: 0 .5em;
+  color:#000;
+  cursor:pointer;
+  font-weight: 700;
+}
+.drowbox__select::-ms-expand {
+  display: none;
+}
+.drowbox {
+  position: relative;
+  display: flex;
+  width: 120px;
+  height: 27px;
+  line-height: 2;
+  /* background: none; */
+  border-radius: 14px !important;
+  overflow: hidden;
+  border-radius: .25em;
+}
+.drowbox::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0.4em;
+  background: #000;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.drowbox:hover::after {
+  color: #23b499;
+}
+
+
+.btn{
+  /* border: black solid 1px; */
+  height: 45px;
+  width: 80px;
+  position: relative;
+  z-index: 1;
+}
+.btn-input{
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  bottom: 0;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  color:black;
+  transition: 0.5s ease;
+}
+.btn-input:hover{
+  background: #000;
+  color: white;
+}
+.btn-input:active{
+  transform: scale(0.9);
+}
+
+.container-clima{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clima{
+ /*  border: 1px solid rebeccapurple; */
+  width: 80%;
+  max-width: 700px;
+  height: 60vh;
+  max-height: 500px;
+  min-height: 250px;
+  background: url('https://img.freepik.com/foto-gratis/cielo-paisaje-playa-atardecer-belleza_1203-6292.jpg?w=2000') no-repeat right bottom ;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(86, 85, 85, 0.638) 4px 4px 15px;
+
+  /* padding: 1.5rem; */
+
+}
+
+.clima__city{
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.8rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  margin: 0;
+}
+
+.clima__img{
+ /*  border: solid 1px black; */
+  width: 220px;
+  height: 200px;
+  position: absolute;
+  left: 1.5rem;
+  top: calc(50% - 100px);
+  filter: drop-shadow(0 0 8px rgba(20, 32, 49, 0.5));
+  
+}
+
+.clima__temp{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  /* padding: 0; */
+  
+}
+
+.temp{
+  margin: 0;
+  font-size: 7rem;
+  font-weight: 100;
+  text-shadow: 0 0 5px rgba(37, 61, 86, 0.433);
+}
+.temp span{
+  margin: 0;
+  padding: 0;
+}
+.centigrado{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  /* text-shadow: 0 0 5px rgba(26, 42, 59, 0.674); */
+  color: #1c4e6a;
+  /* margin-top: -40px; */
+}
+
+.clima__pronostico{
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem ;
+  justify-content: center;
+  font-weight: 700;
+
+  /* border:  red solid 1px; */
+}
+
+.pronostico{
+  width: 90px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.175);
+}
+
+.icon-temp__num{
+  font-weight: 100;
+}
+
+.pronostico__title{
+  margin: 0;
+  padding: 5px;
+  font-size: 0.8rem;
+  
+}
+
+.icon-temp{
+/*  position: relative; */
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.icon-temp__icon{
+  font-size: 1.4rem;
+}
+.icon-temp__num{
+  font-size: 1.8rem;
+  margin: 0;
+}
+.icon-temp__icon--red{
+  color: rgb(240, 60, 24);
+}
+.icon-temp__icon--blue{
+  color: rgb(24, 143, 240);
+}
+
+.icon-temp__icon--grey{
+  color: rgb(93, 95, 97);
+}
+
+.porciento{
+  font-size: 1.2rem;
+}
+
+.msgError{
+  display: inline-flex;
+  padding: 3px 10px;
+  background: red;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.msgIcon{
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
